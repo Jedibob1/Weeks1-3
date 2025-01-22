@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 5;
-    public bool hasBeenFired = true;
+    public bool hasBeenFired = false;
     void Update()
     {
         if(hasBeenFired == true)
@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
 
     void Movement()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        transform.position += transform.up * speed * Time.deltaTime;
         //transform.Translate(transform.up * speed * Time.deltaTime);
     }
 }
